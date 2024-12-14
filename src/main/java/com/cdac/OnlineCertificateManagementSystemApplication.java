@@ -25,7 +25,7 @@ public class OnlineCertificateManagementSystemApplication {
 	            User newAdmin = new User();
 	            newAdmin.setUsername("admin");
 	            // Encrypt password before saving
-	            newAdmin.setPassword(passwordEncoder.encode("Alok@123"));
+	            newAdmin.setPassword(passwordEncoder.encode("admin"));
 	            newAdmin.setRole("ADMIN");
 	            userRepository.save(newAdmin);
 	            System.out.println("Admin user 'alok' created successfully with password 'Alok@123'");
