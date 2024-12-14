@@ -16,7 +16,7 @@ import com.cdac.service.CertificateService;
 
 @RestController
 @RequestMapping("/user/certificate")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://web-xi-orcin.vercel.app")
 public class CertificateController {
 
 	@Autowired
