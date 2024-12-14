@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate of Achievement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Certificate container */
+        .certificate {
+            width: 800px; /* Width for better PDF fit */
+            margin: 20px auto;
+            padding: 40px; /* Increased padding for better fit */
+            border: 5px solid #2c3e50; /* Dark border color */
+            border-radius: 15px; /* Rounded corners */
+            background-color: #ecf0f1; /* Light background color */
+            box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Shadow for depth */
+            text-align: center;
+        }
+
+        /* Header with logo */
+        header {
+            margin-bottom: 30px; /* Space below header */
+        }
+
+        header img {
+            width: 120px; /* Adjust logo size */
+            margin-bottom: 15px; /* Space below logo */
+        }
+
+        header h1 {
+            font-size: 42px; /* Increased font size for header */
+            color: #2980b9; /* Header color */
+            margin-bottom: 10px; /* Space below header */
+            font-weight: bold; /* Bold font */
+            letter-spacing: 2px; /* Letter spacing for elegance */
+        }
+
+        /* Content section */
+        .content {
+            margin-bottom: 30px; /* Space below content */
+        }
+
+        .content p {
+            font-size: 20px; /* Content font size */
+            margin-bottom: 10px; /* Space below paragraphs */
+        }
+
+        .recipient-name {
+            font-size: 34px; /* Increased font size for recipient name */
+            font-weight: bold; /* Bold font */
+            color: #2c3e50; /* Text color */
+            margin: 10px 0; /* Space around name */
+        }
+
+        .course-name {
+            font-size: 28px; /* Increased font size for course name */
+            font-weight: bold; /* Bold font */
+            color: #2c3e50; /* Text color */
+            margin: 10px 0; /* Space around course name */
+        }
+
+        .issuer, .date, .time {
+            font-size: 20px; /* Font size for issuer, date, and time */
+            color: #34495e; /* Text color */
+            margin: 5px 0; /* Space around issuer, date, and time */
+        }
+
+        .time {
+            font-style: italic; /* Italic style for time */
+        }
+
+        /* Footer with signature */
+        footer {
+            margin-top: 40px; /* Space above footer */
+            font-size: 20px; /* Footer font size */
+            color: #2c3e50; /* Text color */
+        }
+
+        .signature {
+            margin-top: 20px; /* Space above signature */
+            padding: 10px; /* Padding for signature */
+            border-top: 2px solid #2980b9; /* Signature line */
+            display: inline-block; /* Inline block for signature */
+            width: 250px; /* Width for signature */
+            text-align: center; /* Center text */
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <header>
+            <img src="path/to/ocms-logo.png" alt="OCMS Logo" /> <!-- Logo Placeholder -->
+            <h1>Certificate of Achievement</h1>
+        </header>
+        <section class="content">
+            <p>This is to certify that</p>
+            <h2 class="recipient-name" th:text="${name}"></h2>
+            <p>has successfully completed the</p>
+            <h3 class="course-name" th:text="${certificate_name}"></h3>
+            <p>Issued by: <span class="issuer" th:text="${issuer}"></span></p>
+            <p>Issued on: <span class="date" th:text="${date}"></span></p>
+            <p class="time">Time: <span th:text="${time}"></span></p> <!-- Time section -->
+        </section>
+        <footer>
+            <div class="signature">
+                <p>Alok Garg</p>
+                <p>---------------</p>
+                <p>Authorized Signature</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
