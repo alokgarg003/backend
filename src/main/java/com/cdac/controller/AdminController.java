@@ -24,7 +24,7 @@ import com.cdac.service.CertificateService;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://web-xi-orcin.vercel.app ")
 public class AdminController {
 
 	@Autowired
